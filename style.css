@@ -1,0 +1,292 @@
+@import url('https://cdn.discordapp.com/attachments/1188406720716869660/1189081466844491867/image.png?ex=67eec929&is=67ed77a9&hm=a17b71b528b770976e1e967b25d0e1350a35a2cc51c549e544e11cf3bcd9a075&');
+
+body{
+    background-color: #000;
+    color: #ffffff;
+    font-family: 'Roboto', sans-serif;
+    overflow-x: hidden;
+}
+
+.title-container {
+    text-align: center;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+#text01 {
+    font-size: 1.5rem;
+    font-weight: 300;
+}
+
+#container{
+    transition: 1s all ease-in-out;
+}
+
+#container.menuopen{
+    filter: blur(8px);
+    transform: scale(1.2);
+}
+
+section{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    position: relative;
+    background-size: cover;
+    padding: 50px;
+}
+
+section::after{
+    content: "";
+    position: absolute;
+    background-color: #000;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    opacity: 0.5;
+}
+
+section h1{
+    font-size: 120px;
+    z-index: 2;
+}
+
+header{
+    z-index: 9999;
+    position: relative;
+}
+
+header #logo{
+    position: fixed;
+    top: 30px;
+    left: 0;
+    right: 0;
+    width: 80px;
+    height: auto;
+    margin: 0 auto;
+    opacity: 1;
+    transition: all 0.3s cubic-bezier(0.215, 0.61, 0.355, 1) 0.6s;
+}
+
+header nav{
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    left: 0;
+    right: 0;
+    width: 420px;
+    z-index: 10;
+    top: 30px;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(5px);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    transition: 1s all cubic-bezier(0.080, 0.9, 0.18, 1) 0.2s;
+}
+
+header nav a{
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 700;
+    padding: 10px 16px;
+    font-size: 18px;
+    letter-spacing: 1.8px;
+    transition: 0.3s all cubic-bezier(0.080, 0.9, 0.18, 1) 0.6s, 0.3s color ease;
+}
+
+header nav a:hover{
+    color: #000;
+}
+
+header nav button{
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    width: 60px;
+    height: 60px;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    position: absolute;
+    z-index: 100;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    border-radius: 100%;
+    cursor: pointer;
+    transform: scale(0);
+    transition: 0.3s all cubic-bezier(0.080, 0.9, 0.18, 1) 0.2s;
+}
+
+header nav button {
+    width: 50px;
+    height: 50px;
+    background: url('https://cdn.discordapp.com/attachments/1189820484955689000/1357212150061600799/pngtree-cartoon-rocket-clipart-for-kids---free-png-image_13375663-removebg-preview.png?ex=67ef61d0&is=67ee1050&hm=48e6c935db688036a0c86504ee489722bca32e802ce3a1b2381ee862aa1add00&') no-repeat center center;
+    background-size: contain;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+}
+
+header nav button:hover {
+    transform: scale(1.1);
+}
+
+header.sticky #logo{
+    opacity: 0;
+}
+
+header.sticky nav{
+    top: 20px;
+    padding: 0;
+    width: 80px;
+    height: 80px;
+}
+
+header.sticky nav button{
+    transform: scale(1);
+    transition-delay: 0.3s;
+}
+
+header.sticky nav button span{
+    transform: scaleX(1);
+    transition: 0.6s transform cubic-bezier(0.080, 0.9, 0.18, 1) 0.8s, 0.3s margin ease-in 0s;
+}
+
+header.sticky nav a{
+    opacity: 0;
+    transform: scale(0.3);
+    transition-delay: 0.1s;
+}
+
+@media screen and (max-width: 520px) {
+
+    header nav{
+        height: 60px;
+        width: 390px;
+    }
+
+    header nav button{
+        width: 50px;
+        height: 50px;
+    }
+
+    header nav a{
+        font-size: 16px;
+    }
+
+    section h1{
+        font-size: 80px;
+    }
+
+    header.sticky nav{
+        width: 70px;
+        height: 70px;
+    }
+
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+    background-color: #ffffff;
+    font-family: Arial, sans-serif;
+}
+
+.footer-links {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 10px;
+}
+
+.footer-links a {
+    text-decoration: none;
+    color: #333;
+    font-size: 14px;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 600px;
+}
+
+.footer-bottom p {
+    font-size: 14px;
+    color: #666;
+}
+
+/* Container */
+.language-container {
+    position: relative;
+    display: inline-block;
+}
+
+/* Tombol utama */
+.language-button {
+    border: none;
+    background-color: #ffffff;
+    padding: 8px 15px;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    position: relative;
+}
+
+/* Hover tombol */
+.language-button:hover {
+    background-color: #ffffff;
+}
+
+/* Dropdown List (Muncul ke atas) */
+.language-dropdown {
+    display: none;
+    position: absolute;
+    bottom: 40px;  /* Muncul ke atas */
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 180px;
+    border-radius: 5px;
+    overflow: hidden;
+    z-index: 100;
+}
+
+/* Item dalam dropdown */
+.language-dropdown li {
+    padding: 10px;
+    cursor: pointer;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: background 0.3s;
+}
+
+/* Hover item */
+.language-dropdown li:hover {
+    background-color: #ffffff;
+}
